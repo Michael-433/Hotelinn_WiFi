@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f2927" />
+    <meta
+      name="description"
+      content="Secure guest Wi-Fi onboarding for Hotelinn Lagos."
+    />
+    <title>Hotelinn Lagos | Guest Wi-Fi</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
+  </head>
+  <body class="landing-page">
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand-lockup" href="/" aria-label="Hotelinn Lagos home">
+          <span class="brand-mark">HL</span>
+          <span>
+            <span class="eyebrow">Guest Wi-Fi Portal</span>
+            <strong>Hotelinn Lagos</strong>
+          </span>
+        </a>
+        <span class="status-pill">QR Connect Flow</span>
+      </header>
+
+      <main class="hero-grid">
+        <section class="hero-copy">
+          <p class="section-tag">Fast, private, and reception-ready</p>
+          <h1>Welcome to a smoother way to get online.</h1>
+          <p class="hero-text">
+            Scan, confirm your details, and connect to Hotelinn Lagos Wi-Fi in
+            seconds. This guest portal is optimized for mobile devices so
+            arriving guests can get online without queueing at the desk.
+          </p>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <h2>1. Scan the QR</h2>
+              <p>
+                The hotel QR code opens this landing page from any smartphone,
+                tablet, or laptop browser.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h2>2. Confirm your details</h2>
+              <p>
+                Enter your full name and email so the hotel can keep a secure
+                guest access log.
+              </p>
+            </article>
+            <article class="feature-card">
+              <h2>3. Connect instantly</h2>
+              <p>
+                Receive the Wi-Fi name and password on the confirmation screen,
+                ready to copy into your settings.
+              </p>
+            </article>
+          </div>
+
+          <div class="info-strip">
+            <div>
+              <span>Secure guest capture</span>
+              <strong>Persistent records</strong>
+            </div>
+            <div>
+              <span>Designed for hospitality</span>
+              <strong>Mobile-first experience</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="hero-panel">
+          <article class="card" data-form-panel>
+            <div class="card-heading">
+              <p class="section-tag">Guest sign-in</p>
+              <h2>Access Hotel Wi-Fi</h2>
+              <p>
+                Complete the form below and we will unlock the current Wi-Fi
+                credentials for your stay.
+              </p>
+            </div>
+
+            <form class="form-grid" data-guest-form novalidate>
+              <label class="field">
+                <span>Full name</span>
+                <input
+                  type="text"
+                  name="name"
+                  autocomplete="name"
+                  minlength="2"
+                  maxlength="80"
+                  placeholder="e.g. Ada Lovelace"
+                  required
+                />
+              </label>
+
+              <label class="field">
+                <span>Email address</span>
+                <input
+                  type="email"
+                  name="email"
+                  autocomplete="email"
+                  inputmode="email"
+                  maxlength="120"
+                  placeholder="you@example.com"
+                  required
+                />
+              </label>
+
+              <div class="honeypot-field" aria-hidden="true">
+                <label>
+                  Website
+                  <input
+                    type="text"
+                    name="website"
+                    tabindex="-1"
+                    autocomplete="off"
+                  />
+                </label>
+              </div>
+
+              <button class="button primary" type="submit">
+                <span class="button-label">Connect to Wi-Fi</span>
+                <span class="button-spinner" aria-hidden="true"></span>
+              </button>
+
+              <p class="microcopy">
+                Your information is used to manage secure guest network access
+                during your visit to Hotelinn Lagos.
+              </p>
+
+              <div
+                class="alert hidden"
+                data-form-alert
+                role="alert"
+                aria-live="polite"
+              ></div>
+            </form>
+          </article>
+
+          <article class="card success-card hidden" data-success-panel>
+            <div class="card-heading">
+              <p class="section-tag">Connection unlocked</p>
+              <h2>You are ready to go online</h2>
+              <p>
+                Use the credentials below in your device settings. If you need
+                help, the front desk can assist immediately.
+              </p>
+            </div>
+
+            <div class="credentials-grid">
+              <div class="credential-item">
+                <span>Wi-Fi network</span>
+                <strong data-wifi-ssid>Loading...</strong>
+              </div>
+              <div class="credential-item">
+                <span>Password</span>
+                <strong data-wifi-password>Loading...</strong>
+              </div>
+            </div>
+
+            <div class="success-callout">
+              <p class="success-title">Next steps</p>
+              <ol class="steps-list" data-connection-steps></ol>
+            </div>
+
+            <div class="success-meta">
+              <span>
+                Connected for
+                <strong data-guest-name>Guest</strong>
+              </span>
+              <span>
+                Issued at
+                <strong data-connected-at>--</strong>
+              </span>
+            </div>
+
+            <div class="button-row">
+              <button class="button secondary" type="button" data-copy-password>
+                Copy password
+              </button>
+              <button class="button ghost" type="button" data-reset-form>
+                Register another guest
+              </button>
+            </div>
+
+            <p class="microcopy" data-support-copy>
+              Need help? Contact the front desk.
+            </p>
+          </article>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

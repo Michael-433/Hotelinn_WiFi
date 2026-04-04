@@ -1,0 +1,39 @@
+{
+  "name": "hotelinn-lagos-wifi-portal",
+  "version": "1.0.0",
+  "description": "Production-ready Wi-Fi landing page and guest onboarding system for Hotelinn Lagos.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "check": "node --check server.js && node --check server/config/db.js && node --check server/config/env.js && node --check server/controllers/connectController.js && node --check server/controllers/userController.js && node --check server/middleware/adminAuth.js && node --check server/middleware/asyncHandler.js && node --check server/middleware/errorHandler.js && node --check server/middleware/rateLimiter.js && node --check server/middleware/validateRequest.js && node --check server/middleware/validators.js && node --check server/models/User.js && node --check server/routes/connectRoutes.js && node --check server/routes/userRoutes.js && node --check public/script.js"
+  },
+  "keywords": [
+    "hotel",
+    "wifi",
+    "landing-page",
+    "express",
+    "mongodb"
+  ],
+  "author": "Codex",
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.7.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-rate-limit": "^7.5.0",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
+    "hpp": "^0.2.3",
+    "mongoose": "^8.9.5",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "engines": {
+    "node": ">=20",
+    "npm": ">=10"
+  }
+}
