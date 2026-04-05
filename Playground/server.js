@@ -79,7 +79,7 @@ app.get("/health", (req, res) => {
   });
 });
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "../public")));
 
 app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "public", "index.html"));
@@ -96,9 +96,11 @@ const startServer = async () => {
   validateEnvironment();
   await connectDatabase();
 
-  const server = app.listen(env.port, () => {
-    console.log(`Hotelinn Lagos portal is live on port ${env.port}.`);
-  });
+  const PORT = process.env.PORT || env.port || 3000;
+
+const server = app.listen(PORT, () => {
+  console.log(`Hotelinn Lagos portal is live on port ${PORT}.`);
+});
 
   let shuttingDown = false;
   const shutdown = async (signal) => {
